@@ -5,7 +5,7 @@ protos/
 results.db
 results.csv
 sqlite.db
-# excel analyse
+# excel analyse 
 results_from_db.xlsx
 # sqlite stuff
 sqlite3.dll
