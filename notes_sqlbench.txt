@@ -1,0 +1,21 @@
+Notes sql bench 29-12-2017
+===========================
+
+check examples :
+================
+multi producers, multi consumers :
+https://stonesoupprogramming.com/2017/09/11/python-multiprocessing-producer-consumer-pattern/
+multi producers, mono consumers :
+https://gist.github.com/brantfaircloth/1255715
+good examples :
+https://www.oreilly.com/learning/python-cookbook-concurrency
+https://github.com/taotetek/blog_examples/blob/master/python_multiprocessing_with_zeromq/workqueue_example.py
+
+good : 
+https://pymotw.com/2/multiprocessing/communication.html
+
+Installation ODBC
+===================
+For sqlite odbc:
+-install davart sqlite odbc
+-copy sqlite3.dll dans rep system32 
