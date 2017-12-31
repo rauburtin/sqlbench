@@ -15,3 +15,4 @@ Use the filltables.py program to create and populate the sample database.
 Modify the sqlbench.py to change the ramp of processes and run it
 
 You can create an Excel file to analyse the results from the result database.
+An exemple (results_from_db_samples.xlsx) is provided. Install an ODBC driver for sqlite to use it.
