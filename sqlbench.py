@@ -187,9 +187,11 @@ def start_consumers(results_exec, start, nb_consumers, time_for_group):
             results_exec.append((num_consumers, name, start_exec, task_name, 
                 elapse_exec, error))
 
-    print("Wait 5s to be sure that processes have flushed and that handles will be closed")
-    #to let close the handles
-    time.sleep(5)
+    #is_alive is false but processes are still there. 
+    #These 2 lines insure that the processes finish. 
+    #We use a timeout of 1 sec to not wait to long
+    for c in consumers:
+        c.join(1)
 
     print("Killing left process")
     #be sure that the consumers finish
@@ -198,7 +200,7 @@ def start_consumers(results_exec, start, nb_consumers, time_for_group):
             c.terminate()
             c.join()
             
-    print "end"
+    print "End"
 
 def tofdec(Nb):
     return str(Nb).replace(".",",")
@@ -285,7 +287,7 @@ if __name__ == '__main__':
     start = time.time()
     
     #in sec
-    time_for_group = 60
+    time_for_group = 10
     
     #ramp
     for i in range(100,1000,100):
