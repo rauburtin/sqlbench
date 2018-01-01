@@ -287,7 +287,7 @@ if __name__ == '__main__':
     start = time.time()
     
     #in sec
-    time_for_group = 10
+    time_for_group = 60
     
     #ramp
     for i in range(100,1000,100):
